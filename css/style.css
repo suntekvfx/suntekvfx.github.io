@@ -1,0 +1,180 @@
+body{
+    font-family: 'Bebas Neue', cursive;
+}
+
+body.text-light{
+    background-color: #202020;
+    background-image: linear-gradient(hsla(0,0%,100%,.02) 1px,transparent 0),linear-gradient(90deg,hsla(0,0%,100%,.02) 1px,transparent 0);
+    background-size: 8px 8px;
+    background-repeat: repeat space;
+}
+body.text-dark{
+    background-color: #f7f7f7;
+    background-image: linear-gradient(rgba(0,0,0,.04) 1px,transparent 0),linear-gradient(90deg,rgba(0,0,0,.04) 1px,transparent 0),url(/assets/images/ink-drop3.png);
+    background-size: 8px 8px,8px 8px,40vh;
+    background-repeat: repeat space;
+}
+
+body.text-dark .text-light {
+    color: #2a2a2a !important;
+}
+
+.swal2-popup {
+    display: none;
+    position: relative;
+    box-sizing: border-box;
+    flex-direction: column;
+    justify-content: center;
+    width: 50em !important;
+    max-width: 100%;
+    padding: 1.25em;
+
+    background: rgba(0,0,0,0) !important;
+}
+
+.swal2-container.swal2-backdrop-show, .swal2-container.swal2-noanimation {
+    background: rgba(0,0,0,.6) !important;
+}
+
+.vid {
+    position: relative;
+    cursor: pointer;
+}
+
+.vid::after {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    background: linear-gradient(45deg, #0cbcf2, #750cf2, #750cf2, #0cbcf2);
+    border-radius: 15px;
+    z-index: -1;
+  }
+  .vid::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, #0cbcf2, #750cf2, #750cf2, #0cbcf2);
+    z-index: -2;
+    filter: blur(15px);
+  }
+.vid img {
+    max-width: 100%;
+    object-fit:cover;
+    transition: transform 1.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.vid:hover img{
+    transform: scale(1.05);
+}
+
+.inner-vid {
+    border-radius: 10px;
+}
+iframe{
+    background-color: rgba(112, 31, 211, 0.275);
+}
+
+.tshadow {
+    text-shadow: 5px 5px 8px rgba(0,0,0,.6);
+}
+.nav-a {
+    font-size: 1.5rem;
+}
+body.text-light .nav-a {
+    text-decoration: none;
+    color: white
+}
+body.text-dark .nav-a {
+    text-decoration: none;
+    color: #2a2a2a
+}
+
+body.text-light .nav-a:hover, body.text-dark .nav-a:hover {
+    color: #0cbcf2
+}
+.nav-a-selected {
+    color: #0cbcf2 !important;
+}
+
+@keyframes roll {
+    0% { transform: rotate(0); }
+    100% { transform: rotate(-360deg); }
+  }
+
+  #sunkern{
+      animation: roll 3s linear 0s infinite;
+  }
+
+.text-about{
+    font-size: 1.3rem;
+}
+
+.hexagon-img{
+    position: absolute;
+    background: url("../images/hexagon.png");
+    background-size: cover;
+	width: 80px;
+	height: 80px;
+	top: 40px;
+	right: 40px;
+}
+
+body.text-light .hexagon-img {
+	position: absolute;
+    background: url("../images/hexagon.png");
+    background-size: cover;
+	width: 80px;
+	height: 80px;
+	top: 40px;
+	right: 40px;
+}
+
+body.text-dark .hexagon-img {
+	position: absolute;
+    background: url("../images/d-hexagon.png");
+    background-size: cover;
+	width: 80px;
+	height: 80px;
+	top: 40px;
+	right: 40px;
+}
+
+@keyframes HEXCALE{
+    from{ 
+        transform: scale(1);
+        opacity: 0.2;
+    }
+    to{ 
+        transform: scale(2);
+        opacity: 0;
+    }
+}
+
+.hexcale-1{
+    animation: HEXCALE 2s linear 0s infinite;
+}
+
+.hexcale-2{
+    animation: HEXCALE 2s linear 1s infinite;
+}
+
+body.text-light #lights {
+    color: #2e2e2e;
+}
+
+body.text-dark #lights {
+    color: #f4f4f4;
+}
+
+.logo {
+    position: absolute; 
+    top: 42px; 
+    left: 36px;
+    width: 70px;
+}
