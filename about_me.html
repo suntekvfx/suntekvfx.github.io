@@ -40,11 +40,9 @@
             </div>
         </div>
         <div class="text-about mt-5 text-russo">
-            <div class="display-3 mb-4">Hi, I'm Eros "Suntek" Muñoz.</div> 
-            I'm video editor/motion designer freelance based in Spain. I'm currently working with Elmillor, Sh4rin and theGrefg. 
-            <br/>
-            I carry more than <span class="d-inline-block mx-2" style="font-size: 1.5em;">50 millions</span> Youtube views.
-            In the "Recent works" tab you'll find some of the videos I've worked on.
+            <div class="display-3 mb-4">Hi, I'm Eros "Suntek" Muñoz.</div>
+            I'm a video editor/motion designer freelancer based in Spain with years of professional experience. 
+            <br /> Currently, I'm working full time with Elmillor (250k), Sh4rin (55k) and theGrefg(15.5M).
         </div>
     </div>
 
@@ -70,43 +68,41 @@
 
         $(document).bind('keydown', function(e) {
             if (e.keyCode == 83) {
-
                 $('#sunkern').removeClass("d-none");
                 $('#sunkern').addClass("d-inline-block");
             }
-            return false;
         });
 
         function checkTheme() {
-				let theme = localStorage.getItem('theme');
-				if(theme === 'light') {
-					$("body").removeClass("text-light");
-					$("body").addClass("text-dark");
-				}
-				else {
-					$("body").removeClass("text-dark");
-					$("body").addClass("text-light");
-					localStorage.setItem('theme', 'dark');
-				}
-			}
+            let theme = localStorage.getItem('theme');
+            if(theme === 'light') {
+                $("body").removeClass("text-light");
+                $("body").addClass("text-dark");
+            }
+            else {
+                $("body").removeClass("text-dark");
+                $("body").addClass("text-light");
+                localStorage.setItem('theme', 'dark');
+            }
+        }
 			
-			function switchTheme(){
-                console.log("asda")
-				let theme = localStorage.getItem('theme');
-				if(theme === 'light') {
-					localStorage.setItem('theme', 'dark');
-				}
-				else {
-					localStorage.setItem('theme', 'light');
-				}
-				checkTheme();
-			}
-			
-			$(function() {
-                checkTheme();
-				$("#lights").click(switchTheme);
-                cookieConsent();
-			});
+        function switchTheme(){
+            console.log("asda")
+            let theme = localStorage.getItem('theme');
+            if(theme === 'light') {
+                localStorage.setItem('theme', 'dark');
+            }
+            else {
+                localStorage.setItem('theme', 'light');
+            }
+            checkTheme();
+        }
+        
+        $(function() {
+            checkTheme();
+            $("#lights").click(switchTheme);
+            cookieConsent();
+        });
 </script>
 </body>
 </html>

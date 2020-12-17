@@ -74,34 +74,34 @@
 
 
         function checkTheme() {
-				let theme = localStorage.getItem('theme');
-				if(theme === 'light') {
-					$("body").removeClass("text-light");
-					$("body").addClass("text-dark");
-				}
-				else {
-					$("body").removeClass("text-dark");
-					$("body").addClass("text-light");
-					localStorage.setItem('theme', 'dark');
-				}
-			}
+            let theme = localStorage.getItem('theme');
+            if(theme === 'light') {
+                $("body").removeClass("text-light");
+                $("body").addClass("text-dark");
+            }
+            else {
+                $("body").removeClass("text-dark");
+                $("body").addClass("text-light");
+                localStorage.setItem('theme', 'dark');
+            }
+        }
 			
-			function switchTheme(){
-				let theme = localStorage.getItem('theme');
-				if(theme === 'light') {
-					localStorage.setItem('theme', 'dark');
-				}
-				else {
-					localStorage.setItem('theme', 'light');
-				}
-				checkTheme();
-			}
-			
-			$(function() {
-                checkTheme();
-				$("#lights").click(switchTheme);
-                cookieConsent();
-			});        
+        function switchTheme(){
+            let theme = localStorage.getItem('theme');
+            if(theme === 'light') {
+                localStorage.setItem('theme', 'dark');
+            }
+            else {
+                localStorage.setItem('theme', 'light');
+            }
+            checkTheme();
+        }
+        
+        $(function() {
+            checkTheme();
+            $("#lights").click(switchTheme);
+            cookieConsent();
+        });        
 </script>
 </body>
 </html>

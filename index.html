@@ -184,15 +184,6 @@
                 })
         }
 
-        $(document).bind('keydown', function(e) {
-            if (e.keyCode == 74) {
-
-                $('#sunkern').removeClass("d-none");
-                $('#sunkern').addClass("d-inline-block");
-            }
-            return false;
-        });
-
         function checkTheme() {
 				let theme = localStorage.getItem('theme');
 				if(theme === 'light') {
