@@ -190,3 +190,12 @@ body.text-dark #lights {
     left: 36px;
     width: 70px;
 }
+
+.swal2-content {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+.swal2-popup {
+    width: auto !important;
+}

@@ -38,7 +38,7 @@
 
         <div class="row pb-4">
             <div class="col-12 col-md-4  p-3">
-                <div class="vid" data-url="w4hXqsLnIS4">
+                <div class="vid" data-url="w4hXqsLnIS4" onclick="fire(2)">
                     <div class="inner-vid overflow-hidden">
                         <img src="thumbnails/t1.jpg" alt="El rap de Calvaland">
                     </div>
@@ -168,17 +168,19 @@
     <script src="js/purecookie.js"></script>
     <script>
         $(function(){
+            cookieConsent();
             $(".vid").click( function() {
+                
                 fire(this.dataset.url);
             });
             
             checkTheme();
             $("#lights").click(switchTheme);
-            cookieConsent();
         });
         function fire(target) {
+            
             Swal.fire({
-                html: '<iframe width="560" height="315" src="https://www.youtube.com/embed/' + target + '" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+                html: '<iframe width="560" height="315" class="mw-100" src="https://www.youtube.com/embed/' + target + '" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
                 focusConfirm: false,
                 confirmButtonText: '<i class="fas fa-times"></i>'
                 })
