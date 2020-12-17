@@ -39,7 +39,6 @@ function setCookie(name,value,days) {
         date.setTime(date.getTime() + (days*24*60*60*1000));
         expires = "; expires=" + date.toUTCString();
     }
-    console.log( name + "=" + (value || "")  + expires + "; path=/")
     document.cookie = name + "=" + (value || "")  + expires + "; path=/";
 }
 function getCookie(name) {
@@ -57,7 +56,6 @@ function eraseCookie(name) {
 }
 
 function cookieConsent() {
-  console.log(getCookie('purecookieDismiss'))
   if (!getCookie('purecookieDismiss')) {
     document.body.innerHTML += '<div class="cookieConsentContainer" id="cookieConsentContainer"><div class="cookieTitle"><a>' + purecookieTitle + '</a></div><div class="cookieDesc"><p>' + purecookieDesc + ' ' + purecookieLink + '</p></div><div class="cookieButton"><a onClick="purecookieDismiss();">' + purecookieButton + '</a></div></div>';
 	  pureFadeIn("cookieConsentContainer");
