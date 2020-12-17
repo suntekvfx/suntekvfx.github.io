@@ -62,7 +62,7 @@
     <script src="js/jquery-3.5.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/sweetalert2.all.min.js"></script>
-    <script src="js/purecookie.js" async></script>
+    <script src="js/purecookie.js"></script>
 <script>
 
         $(document).bind('keydown', function(e) {
@@ -100,10 +100,9 @@
 			}
 			
 			$(function() {
-                cookieConsent();
-				checkTheme();
+                checkTheme();
 				$("#lights").click(switchTheme);
-				
+                cookieConsent();
 			});
 </script>
 </body>

@@ -161,16 +161,16 @@
     <script src="js/jquery-3.5.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/sweetalert2.all.min.js"></script>
-    <script src="js/purecookie.js" async></script>
+    <script src="js/purecookie.js"></script>
     <script>
         $(function(){
-            cookieConsent();
             $(".vid").click( function() {
                 fire(this.dataset.url);
             });
-
+            
             checkTheme();
             $("#lights").click(switchTheme);
+            cookieConsent();
         });
         function fire(target) {
             Swal.fire({
