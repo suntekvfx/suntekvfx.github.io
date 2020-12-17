@@ -10,7 +10,10 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Langar&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/sweetalert2.min.css">
+    <link rel="stylesheet" type="text/css" href="css/purecookie.css" async />
+
     <script src="https://kit.fontawesome.com/ba296b5cb9.js"></script>
 </head>
 <body class="text-light">
@@ -36,11 +39,11 @@
                 <a href="contact_me.html" class="nav-a d-flex p-2">Contact me</a>
             </div>
         </div>
-        <div class="text-about mt-5">
-            <div class="display-5 mb-4">Hi, I'm Eros "Suntek" Muñoz.</div> 
+        <div class="text-about mt-5 text-russo">
+            <div class="display-3 mb-4">Hi, I'm Eros "Suntek" Muñoz.</div> 
             I'm video editor/motion designer freelance based in Spain. I'm currently working with Elmillor, Sh4rin and theGrefg. 
             <br/>
-            I carry more than <span class="d-inline-block mx-2" style="font-size: 1.5rem;">50 millions</span> Youtube views.
+            I carry more than <span class="d-inline-block mx-2" style="font-size: 1.5em;">50 millions</span> Youtube views.
             In the "Recent works" tab you'll find some of the videos I've worked on.
         </div>
     </div>
@@ -55,10 +58,11 @@
     <div class="hexagon-img hexcale-1 d-none d-md-block"></div>
     <div class="hexagon-img hexcale-2 d-none d-md-block"></div>
 
-    
+
     <script src="js/jquery-3.5.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/sweetalert2.all.min.js"></script>
+    <script src="js/purecookie.js" async></script>
 <script>
 
         $(document).bind('keydown', function(e) {
@@ -84,6 +88,7 @@
 			}
 			
 			function switchTheme(){
+                console.log("asda")
 				let theme = localStorage.getItem('theme');
 				if(theme === 'light') {
 					localStorage.setItem('theme', 'dark');
@@ -94,7 +99,8 @@
 				checkTheme();
 			}
 			
-			$(function(){
+			$(function() {
+                cookieConsent();
 				checkTheme();
 				$("#lights").click(switchTheme);
 				

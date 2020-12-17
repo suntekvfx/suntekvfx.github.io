@@ -2,6 +2,10 @@ body{
     font-family: 'Bebas Neue', cursive;
 }
 
+.text-russo {
+    font-family: 'Teko', sans-serif;
+}
+
 body.text-light{
     background-color: #202020;
     background-image: linear-gradient(hsla(0,0%,100%,.02) 1px,transparent 0),linear-gradient(90deg,hsla(0,0%,100%,.02) 1px,transparent 0);
@@ -112,7 +116,15 @@ body.text-light .nav-a:hover, body.text-dark .nav-a:hover {
   }
 
 .text-about{
-    font-size: 1.3rem;
+    font-size: 2.1rem;
+}
+
+.text-contact {
+    font-size: 2.4rem;
+}
+
+.text-links{
+    font-size: 3rem;
 }
 
 .hexagon-img{

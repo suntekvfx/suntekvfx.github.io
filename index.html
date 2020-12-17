@@ -11,6 +11,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Langar&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/sweetalert2.min.css">
+    <link rel="stylesheet" type="text/css" href="css/purecookie.css" async />
+
     <script src="https://kit.fontawesome.com/ba296b5cb9.js"></script>
 </head>
 <body class="text-light">
@@ -159,14 +161,16 @@
     <script src="js/jquery-3.5.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/sweetalert2.all.min.js"></script>
+    <script src="js/purecookie.js" async></script>
     <script>
-        $(function() {
+        $(function(){
+            cookieConsent();
             $(".vid").click( function() {
                 fire(this.dataset.url);
             });
 
             checkTheme();
-				$("#lights").click(switchTheme);
+            $("#lights").click(switchTheme);
         });
         function fire(target) {
             Swal.fire({
