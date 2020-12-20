@@ -1,5 +1,6 @@
 body{
     font-family: 'Bebas Neue', cursive;
+    overflow-y: scroll;
 }
 
 .text-russo {
@@ -89,21 +90,26 @@ iframe{
 }
 .nav-a {
     font-size: 1.5rem;
+    cursor: pointer;
 }
-body.text-light .nav-a {
+body.text-light a {
     text-decoration: none;
     color: white
 }
-body.text-dark .nav-a {
+body.text-dark a {
     text-decoration: none;
     color: #2a2a2a
 }
 
-body.text-light .nav-a:hover, body.text-dark .nav-a:hover {
-    color: #0cbcf2
+body a, .nav-a {
+    transition: color 0.2s ease-in-out;
+}
+
+body.text-light .nav-a:hover, body.text-dark .nav-a:hover, .text-links:hover .nav-a {
+    color: #13b2e2
 }
 .nav-a-selected {
-    color: #0cbcf2 !important;
+    color: #00a3d4 !important;
 }
 
 @keyframes roll {
@@ -111,7 +117,10 @@ body.text-light .nav-a:hover, body.text-dark .nav-a:hover {
     100% { transform: rotate(-360deg); }
   }
 
-  #sunkern{
+  #sunkern {
+      background-color: rgba(0,0,0,0.7);
+  }
+  #sunkern > img{
       animation: roll 3s linear 0s infinite;
   }
 
@@ -198,4 +207,89 @@ body.text-dark #lights {
 
 .swal2-popup {
     width: auto !important;
+}
+
+
+#page-container {
+    position: relative;
+    min-height: 100vh;
+  }
+  
+#content-wrap {
+    padding-bottom: 50px;
+}
+  
+footer {
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
+    width: 100%;
+    text-align: right;
+}
+
+.sh4rin { --palette: #8b0000; }
+.elm    { --palette: #d8e233; }
+.light  { --tc: #fff}
+.dark   { --tc: #000}
+
+.testimonial{
+    font-size: 1.3rem;
+    padding-top: 37px;
+}
+.testimonial .content{
+    padding: 15px 10px;
+    border-radius:6px;
+    margin-bottom: 15px;
+    position: relative;
+    background: var(--palette);
+    min-height: 100px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+.testimonial .content:after{
+    content: "";
+    border-top: 10px solid var(--palette);
+    border-left: 10px solid transparent;
+    border-right: 9px solid transparent;
+    position: absolute;
+    bottom: -8px;
+    left: 50px;
+}
+
+.testimonial .description{
+    margin-bottom: 10px;
+    color: var(--tc);
+}
+.testimonial-pic{
+    float:left;
+}
+.testimonial-pic > img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 2px solid var(--palette);
+    margin-left: 20px;
+}
+
+.testimonial .testimonial-title{
+    font-size: 1.4rem;
+    text-transform:capitalize;
+    font-weight: bold;
+    margin:0;
+}
+.testimonial > .testimonial-review span{
+    color: darkgray;
+    display: block;
+    font-size: 13px;
+    margin-bottom:5px;
+}
+.testimonial a.fa-twitter{
+    color:#00aced;
+}
+
+.carousel-item {
+    transition: transform 0.8s cubic-bezier(0.19, 1, 0.22, 1), opacity .5s ease-out !important
+}
+
+.carousel-inner > .item > img, .carousel-inner > .item > a > img{
+    margin: auto !important;
 }
