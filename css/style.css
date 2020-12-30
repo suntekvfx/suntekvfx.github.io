@@ -16,7 +16,7 @@ body.text-light{
 body.text-dark{
     background-color: #f7f7f7;
     background-image: linear-gradient(rgba(0,0,0,.04) 1px,transparent 0),linear-gradient(90deg,rgba(0,0,0,.04) 1px,transparent 0);
-    background-size: 8px 8px,8px 8px,40vh;
+    background-size: 8px 8px;
     background-repeat: repeat space;
 }
 
