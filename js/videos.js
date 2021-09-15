@@ -1,4 +1,6 @@
 const videos = [
+    "https://www.youtube.com/watch?v=e9V76u9mTDo",
+    "https://www.youtube.com/watch?v=7e9WiIR2aAg",
     "https://www.youtube.com/watch?v=Wx8MaO81g1s",
     "https://www.youtube.com/watch?v=h4PDWHULQko",
     "https://www.youtube.com/watch?v=AHEoA7vK2Ic",
@@ -15,7 +17,6 @@ const videos = [
     "https://www.youtube.com/watch?v=lbRrBo78Gzw",
     "https://www.youtube.com/watch?v=U6KFeIr9e5s",
     "https://www.youtube.com/watch?v=ga1Z3mvDy0c",
-    "https://www.youtube.com/watch?v=dRNF2fUEV9g",
     "https://www.youtube.com/watch?v=YKERuF_CZEQ",
     "https://www.youtube.com/watch?v=b4Y3q-yZRSk",
     "https://www.youtube.com/watch?v=SEcVV7W5eIA",
