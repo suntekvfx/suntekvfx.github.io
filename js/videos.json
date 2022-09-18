@@ -1,4 +1,4 @@
-const videos = [
+[
     "https://www.youtube.com/watch?v=NbddNmQdC5M",
     "https://www.youtube.com/watch?v=f9WJxcF1jJw",
     "https://www.youtube.com/watch?v=_p_iLuLYY2Q",
@@ -38,5 +38,4 @@ const videos = [
     "https://www.youtube.com/watch?v=lYpiquwOD7w",
     "https://www.youtube.com/watch?v=1tXu1MvlWeo",
     "https://www.youtube.com/watch?v=D3Uxq3cVvVI"
-    
-];
+]

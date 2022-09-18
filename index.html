@@ -157,7 +157,6 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/sweetalert2.all.min.js"></script>
     <script src="js/purecookie.js"></script>
-    <script src="js/videos-v2.js"></script>
     <script>
         let sunkern = false;
         $(document).bind('keydown', function (e) {
@@ -178,27 +177,33 @@
         $(function () {
             cookieConsent();
             
-
             checkTheme();
             $("#lights").click(switchTheme);
 
-            videos.forEach(element => {
-                let thumbnail = getThumb(element);
-                let url = element.match('[\\?&]v=([^&#]*)')[1];
-                let block = `<div class="col-12 col-md-4  p-3">
-                    <div class="vid" data-url="` + url + `">
-                        <div class="inner-vid overflow-hidden">
-                            <img src="` + thumbnail + `" alt="Grefg 100k">
-                        </div>
-                        </div>
-                    </div>`;
-                            
-                $("#video_c").append(block);
+            $.ajax({
+                url: "js/videos.json",
+                dataType: "json",
+                cache: false
+            }).done(function (vlist){
+                vlist.forEach(element => {
+                    let thumbnail = getThumb(element);
+                    let url = element.match('[\\?&]v=([^&#]*)')[1];
+                    let block = `<div class="col-12 col-md-4  p-3">
+                        <div class="vid" data-url="` + url + `">
+                            <div class="inner-vid overflow-hidden">
+                                <img src="` + thumbnail + `" alt="Grefg 100k">
+                                </div>
+                            </div>
+                        </div>`;
+                        
+                        $("#video_c").append(block);
+                    });
+                    
+                    $(".vid").click(function () {
+                        fire(this.dataset.url);
+                    });
             });
 
-            $(".vid").click(function () {
-                fire(this.dataset.url);
-            });
             let navigation = document.getElementById('navigation');
          
             navigation.addEventListener('slide.bs.carousel', function (e) {
