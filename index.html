@@ -136,8 +136,6 @@
             <div id="sunkern" class="position-fixed w-100 h-100 d-flex align-items-center justify-content-center d-none" style="top:0; left: 0;">
                 <img width="50%" src="images/Sunkern.png" alt="">
             </div>
-            
-
 
             <a id="lights" style="z-index: 2; font-size: 20px;"
                 class="hexagon-img align-items-center justify-content-center text-decoration-none d-none d-md-flex"
@@ -186,8 +184,8 @@
                 cache: false
             }).done(function (vlist){
                 vlist.forEach(element => {
-                    let thumbnail = getThumb(element);
-                    let url = element.match('[\\?&]v=([^&#]*)')[1];
+                    let url = element.match('((?<=.\?v=)|(?<=.youtu\.be\/))[\\S]{11}')[0];
+                    let thumbnail = getThumb(url);
                     let block = `<div class="col-12 col-md-4  p-3">
                         <div class="vid" data-url="` + url + `">
                             <div class="inner-vid overflow-hidden">
@@ -203,7 +201,7 @@
                         fire(this.dataset.url);
                     });
             });
-
+            loadHDThumnailIfExists();
             let navigation = document.getElementById('navigation');
          
             navigation.addEventListener('slide.bs.carousel', function (e) {
@@ -228,10 +226,20 @@
         });
 
         function getThumb (url) {
-            results = url.match('[\\?&]v=([^&#]*)');
-            video   = (results === null) ? url : results[1];
+            return 'https://img.youtube.com/vi/' + url + '/0.jpg';
+        }
 
-            return 'https://img.youtube.com/vi/' + video + '/0.jpg';
+        function loadHDThumnailIfExists() {
+            let thumbnails = document.querySelectorAll(".gallery-item img");
+            thumbnails.forEach(e => {
+                let hqthumbnail = e.src.slice(0, -5) + "maxresdefault.jpg";
+                let IMG = new Image();
+                IMG.onload = function () {
+                    if(IMG.width > 480)
+                        e.src = hqthumbnail;
+                }
+                IMG.src = hqthumbnail;
+            });
         }
 
         function fire(target) {
