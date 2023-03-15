@@ -6,6 +6,9 @@ body{
 .text-russo {
     font-family: 'Teko', sans-serif;
 }
+.text-quicksand {
+    font-family: quicksand, sans-serif !important;
+}
 
 body.text-light{
     background-color: #202020;
@@ -239,7 +242,8 @@ footer {
 }
 
 .sh4rin { --palette: #8b0000; }
-.elm    { --palette: #d8e233; }
+.elm    { --palette: rgb(239 254 1); }
+.staxx    { --palette: #0186ff; }
 .light  { --tc: #fff}
 .dark   { --tc: #000}
 
